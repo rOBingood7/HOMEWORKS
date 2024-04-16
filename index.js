@@ -57,10 +57,10 @@ let cheap = cars.sort((a, b) => a.price - b.price)[0]
 let fast = cars.sort((a, b) => b.engine - a.engine)[0]
 let old = cars.sort((a, b) => a.year - b.year)[0]
 
-console.log("Expensive:", exp.mode, "Price:", exp.price)
-console.log("Cheap:", cheap.mode, "Price:", cheap.price)
-console.log("Fast:", fast.mode, "Engine:", fast.engine)
-console.log("Old:", old.mode, "Year:", old.year)
+console.log("Most expensive car:", exp.mode, "Price: $", exp.price)
+console.log("Cheapest car:", cheap.mode, "Price: $", cheap.price)
+console.log("Fastest:", fast.mode, "Engine:", fast.engine)
+console.log("Oldest:", old.mode, "Year:", old.year)
 
 
 
