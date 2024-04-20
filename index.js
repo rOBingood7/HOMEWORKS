@@ -1,69 +1,56 @@
-let cars = [
-    {
-        mode: "malibu 2.",
-        mark: "GM",
-        color: "white",
-        price: 30000,
-        engine: 2.4,
-        year: 2023
-    },
-    {
-        mode: "Tahoe.",
-        mark: "GM",
-        color: "black",
-        price: 90000,
-        engine: 3.5,
-        year: 2024
-    },
-    {
-        mode: "Bugatti.",
-        mark: "BG",
-        color: "blue",
-        price: 2000000,
-        engine: 5.5,
-        year: 2020
-    },
-    {
-        mode: "Matiz.",
-        mark: "Daewoo",
-        color: "green",
-        price: 3000,
-        engine: 1.5,
-        year: 2015
-    },
-    {
-        mode: "Nexia 2.",
-        mark: "GM",
-        color: "gray",
-        price: 7000,
-        engine: 1.6,
-        year: 2010
-    },
-    {
-        mode: "Camry.",
-        mark: "Toyota",
-        color: "white",
-        price: 70000,
-        engine: 3.5,
-        year: 2022
+let car = {
+    model: 'Nexia2',
+    year: 2015,
+    luke: true,
+    color: 'white',
+    doors: 4,  
+    engine: '1.6L'  
+}
+
+let details = {  
+    country: 'Uzbekistan',  
+    factory: 'GM',
+    price: 8000,
+
+
+}
+
+let newCar = Object.assign({}, car, {details})
+
+let keys = Object.keys(newCar)
+
+let values = Object.values(newCar)
+
+let combined = keys.concat(values)
+
+// console.log(newCar)
+// console.log(keys)
+console.log(values)
+// console.log(combined)
+
+
+let strings = []
+let numbers = []
+let booleans = []
+let objects = []
+
+values.forEach((value) => {
+    if (typeof value === 'string') {
+        strings.push(value)
     }
-]
-
-let from = prompt('от')
-let up = prompt('до')
-
-let exp = cars.sort((a, b) => b.price - a.price)[0]
-let cheap = cars.sort((a, b) => a.price - b.price)[0]
-let fast = cars.sort((a, b) => b.engine - a.engine)[0]
-let old = cars.sort((a, b) => a.year - b.year)[0]
-
-console.log("Most expensive car:", exp.mode, "Price: $", exp.price)
-console.log("Cheapest car:", cheap.mode, "Price: $", cheap.price)
-console.log("Fastest:", fast.mode, "Engine:", fast.engine)
-console.log("Oldest:", old.mode, "Year:", old.year)
+    if (typeof value === 'number') {
+        numbers.push(value)
+    } 
+    if (typeof value === 'boolean') {
+        booleans.push(value)
+    }
+    if (typeof value === 'object') {
+        objects.push(value)
+    } 
+})
 
 
-
-
-
-
+console.log('Strings:', strings)
+console.log('Numbers:', numbers)
+console.log('Booleans:', booleans)
+console.log('Objects:', objects)
