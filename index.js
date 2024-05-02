@@ -1,124 +1,39 @@
-let arr = [
-    {
-        id: Math.random(),
-        name: 'Timur',
-        info: {
-            school: '235',
-            faculity: 'SMM'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Imran',
-        info: {
-            school: 'ne izvestno',
-            faculity: 'programming'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Aminjon',
-        info: {
-            school: '444',
-            faculity: 'Dizayn'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Maxmud',
-        info: {
-            school: '777',
-            faculity: '3dsmax'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Muxammad',
-        info: {
-            school: '5555',
-            faculity: 'Backend'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Timur',
-        info: {
-            school: '235',
-            faculity: 'SMM'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Imran',
-        info: {
-            school: 'ne izvestno',
-            faculity: 'programming'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Aminjon',
-        info: {
-            school: '444',
-            faculity: 'Dizayn'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Maxmud',
-        info: {
-            school: '777',
-            faculity: '3dsmax'
-        },
-    },
+let fib = [0, 1]
 
-    {
-        id: Math.random(),
-        name: 'Maxmud',
-        info: {
-            school: '777',
-            faculity: '3dsmax'
-        },
-    },
-    {
-        id: Math.random(),
-        name: 'Muxammad',
-        info: {
-            school: '5555',
-            faculity: 'Backend'
-        },
-    },
-]
+let ask = prompt('number?')
 
-let categories = [
-    {
-        course: ' SMM',
-        count: 0
-    },
-    {
-        course: 'PROGRAMMING',
-        count: 0
-    },
-    {
-        course: '     3DSMAX',
-        count: 0
-    },
-    {
-        course: ' DIZAYN',
-        count: 0
-    },
-    {       
-        course: '   BACKEND',
-        count: 0
-    },
-]
-
-
-for (let i = 0; i < arr.length; i++) {
-    for (let k = 0; k < categories.length; k++) {
-        if(arr[i].info.faculity.toUpperCase().trim() === categories[k].course.toUpperCase().trim()) {
-            categories[k].count++
-        }
+function fibonacci(a) {
+    for(let i = 2; i<a; i++) {
+        fib[i]=fib[i-1]+fib[i-2]
     }
 }
-console.log(categories)
+
+fibonacci(ask)
+console.log(
+    fib
+)
+
+
+let arr = [9, 1, 9, 4, 7, 9, 87, 3, 6]
+
+function sort(arr) {
+    let unsorted = true
+
+    while (unsorted === true) {
+        unsorted = false
+
+        for (let i = 0; i < arr.length; i++) {
+            
+            let save = arr[i]
+            arr[i] = arr[i + 1]
+            arr[i + 1] = save
+
+            unsorted = true
+            
+        }
+    }
+    
+    return arr
+}
+
+console.log(sort(arr))
