@@ -1,39 +1,22 @@
-let fib = [0, 1]
+const form = document.forms.namedItem('signup')
+const inps = form.querySelectorAll('.must')
 
-let ask = prompt('number?')
+form.onsubmit = (event) => {
+    event.preventDefault()
 
-function fibonacci(a) {
-    for(let i = 2; i<a; i++) {
-        fib[i]=fib[i-1]+fib[i-2]
+    let isError = false
+
+    inps.forEach(inp => {
+        if(inp.value.length === 0) {
+            inp.style.border = "2px solid #EE0004"
+            isError = true
+        } 
+    })
+
+    if (isError === false) {
+        submit(event.target)
+        return
     }
 }
 
-fibonacci(ask)
-console.log(
-    fib
-)
-
-
-let arr = [9, 1, 9, 4, 7, 9, 87, 3, 6]
-
-function sort(arr) {
-    let unsorted = true
-
-    while (unsorted === true) {
-        unsorted = false
-
-        for (let i = 0; i < arr.length; i++) {
-            
-            let save = arr[i]
-            arr[i] = arr[i + 1]
-            arr[i + 1] = save
-
-            unsorted = true
-            
-        }
-    }
-    
-    return arr
-}
-
-console.log(sort(arr))
+function submit(form) {}
