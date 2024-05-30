@@ -3,9 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Example Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 8px;
+            width: 600px;
+        }
+        h1 {
+            font-family: Inter;
+            font-size: 46px;
+            font-weight: 500;
+            line-height: 55.67px;
+            text-align: center;
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0 30px;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .group {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        .group label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.94px;
+            text-align: left;
+        }
+        .group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            outline: none;
+        }
+        .group p {
+            display: block;
+            margin-top: 5px;
+            font-family: Inter;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13.31px;
+            text-align: left;
+        }
+        button {
+            width: 277px;
+            height: 59px;
+            padding: 10px;
+            border: none;
+            background-color: #4200FF;
+            border: 2px solid #4200FF;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <script src="./index.js"></script>
+    <div class="container">
+        <h1>Example form</h1>
+        <div class="counter">
+            <p>All: </p>
+            <p>Need: </p>
+            <p>Success: </p>
+            <p>Error: </p>
+        </div>
+        <form name="signup">
+            <div class="group">
+                <label>Name</label>
+                <input class="must" placeholder="Tom">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>Age</label>
+                <input class="must">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>Surname</label>
+                <input placeholder="Reinert">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>About You</label>
+                <input class="must">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>Email address</label>
+                <input class="must">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>What is JavaScript?</label>
+                <input class="must">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>Phone number</label>
+                <input>
+            </div>
+            <div class="group">
+                <label>What is HTML?</label>
+                <input class="must">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>Your Mom's name</label>
+                <input>
+            </div>
+            <div class="group">
+                <label>What is CSS?</label>
+                <input class="must">
+                <p>Need to fill</p>
+            </div>
+            <div class="group">
+                <label>Your Dad's name</label>
+                <input>
+            </div>
+            <div class="group">
+                <label>Your favourite car</label>
+                <input>
+            </div>
+            <button type="submit">Save changes</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
